@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Post-No-Bills-Jaffna-Bold';
+    src:url('./fonts/PostNoBillsJaffna-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,700,700italic);
+
+.hadeer__offer{
+
+    width: 100%;
+    height: 100%;
+
+    background: url('./backgroundHeader.jpg') no-repeat center center/cover;
+
+
+}
+
+.header__container{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0 auto;
+
+    color: #fff;
+
+    font-family: 'PT Sans';
+}
+
+.header__offer__logo{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 320px;
+    width: 320px;
+
+    border: 4px solid #fff;
+
+    margin: 0 auto;
+
+}
+
+.header__offer__logo__text{
+
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.header__offer__logo__text__title{
+
+    position: relative;
+
+    font-size: 64px;
+    font-family: 'Post-No-Bills-Jaffna-Bold';
+}
+
+.header__offer__logo__text__title::after{
+
+    content: '';
+
+    position: absolute;
+    bottom: -5%;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: #fff;
+
+}
+
+.header__offer__logo__text__subtitle{
+
+    margin-top: 20px;
+
+    font-size: 22px;
+}
+
+.header__offer__description{
+
+    text-align: center;
+    text-transform: uppercase;
+
+    line-height: 20px;
+
+    margin: 0 auto;
+}

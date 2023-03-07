@@ -8,9 +8,7 @@ import DekstopHeader from './components/dekstop/header/Header.js'
 import DekstopMain from './components/dekstop/main/Main.js';
 import DekstopFooter from './components/dekstop/footer/Footer.js';
 
-import MobileDetect from '../node_modules/mobile-detect/mobile-detect.js';
-
-let detect = new MobileDetect(window.navigator.userAgent);
+import detect from './detect.js';
 
 function App() {
 

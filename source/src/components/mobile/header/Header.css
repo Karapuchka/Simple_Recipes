@@ -4,8 +4,10 @@
     width: 100%;
 
     display: flex;
+    flex-direction: column;
 
     position: relative;
+
 }
 
 .header__item{
@@ -17,10 +19,51 @@
     flex-direction: column;
 }
 
+.header__item--offer{
+
+}
+
+.header__offer__btn-active-menu{
+
+    position: relative;
+    top: 2%;
+    left: 50%;
+    
+    z-index: 2;
+}
+
+.header__offer__btn-active-menu__line-right, .header__offer__btn-active-menu__line-left{
+
+    position: absolute;
+
+    width: 2px;
+    height: 30px;
+
+    background-color: #fff;
+
+    transition: transform 1s ease;
+    
+}
+
+.header__offer__btn-active-menu__line-right{
+    
+    transform: rotate(45deg);
+    left: 2.5%;
+}
+
+.header__offer__btn-active-menu__line-left{
+    
+    transform: rotate(-45deg);
+    left: -3%;
+    
+}
+
 .header__item--nav{
     position: absolute;
     top: 0;
-    left: 100%;
+    left: 0;
+
+    z-index: 1;
 
     background: #0F0F0F;
 }

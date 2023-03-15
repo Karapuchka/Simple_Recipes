@@ -38,15 +38,9 @@ function Header() {
     
                         <div className="header-dekstop__info__item">
     
-                            <div className="header-dekstop__info__item__icon-exit"></div>
+                            <div className="header-dekstop__info__item__icon-exit js-header-info-btn-login"></div>
     
-                            <div className="header-dekstop__info__item__icon-btns header-dekstop__info__item__text">
-    
-                                <div className="header-dekstop__info__item__icon-btns">Войти</div>
-                                /
-                                <div className="header-dekstop__info__item__icon-btns">Регистрация</div>
-    
-                            </div>
+                            <div className="header-dekstop__info__item__icon-btns header-dekstop__info__item__text js-header-info-btn-login">Войти / Регистрация</div>
     
                         </div>
 
@@ -54,7 +48,13 @@ function Header() {
 
                 </div>
 
-                <nav></nav>
+                <nav className="header-dekstop__nav">
+
+                    <div className="header-dekstop__nav__logo">
+
+                    </div>
+
+                </nav>
 
             </div>
         )

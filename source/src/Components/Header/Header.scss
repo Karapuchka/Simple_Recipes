@@ -95,6 +95,15 @@
 
                 cursor: pointer;
             }
+
+            &__icon-btns{
+
+                cursor: pointer;
+
+                display: flex;
+
+                user-select: none;
+            }
         }
     }
 }

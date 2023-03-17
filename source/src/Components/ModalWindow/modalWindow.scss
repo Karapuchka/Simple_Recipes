@@ -1,0 +1,326 @@
+.modal-window{
+    position: absolute;
+    top: 0;
+    height: 0;
+
+    background-color: rgba($color: #000000, $alpha: .99);
+
+    height: 100vh;
+    width: 100%;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+
+    &__container{
+        position: relative;
+
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__btn-exit{
+
+        position: absolute;
+        top: 10%;
+        right: 20%;
+
+        cursor: pointer;
+
+        width: 30px;
+        height: 30px;
+    }
+
+    &__btn-exit::before, &__btn-exit::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 50%;
+
+        height: 30px;
+        width: 2px;
+
+        transform: scale(0);
+
+        background-color: #ffffff;
+    }
+
+    &__btn-exit::after{
+
+        transform: rotate(90deg) scale(0);
+
+    }
+
+    &__line{
+        position: relative;
+
+        height: 3px;
+        width: 200px;
+
+        background-color: #ffffff;
+
+        transform-origin: center;
+
+        opacity: 0;
+
+        user-select: none;
+    }
+
+    &__title{
+
+        position: relative;
+        top: 0;
+        left: 0;
+
+        font-size: 64px;
+        font-family: 'Post No Bills Jaffna SemiBold', sans-serif;
+
+        text-transform: uppercase;
+        
+        color: #ffffff;
+
+        opacity: 0;
+
+        user-select: none;
+    }
+
+    &__description{
+
+        position: relative;
+        top: 0;
+        left: 0;
+
+        font-size: 16px;
+        font-family: 'PT Sans';
+
+        text-transform: uppercase;
+        
+        color: #ffffff;
+
+        opacity: 0;
+
+        user-select: none;
+
+    }
+
+}
+
+.modal-window--open{
+    display: flex;
+
+    animation: modalOpen .7s forwards;
+
+    .modal-window__btn-exit::after{
+
+        animation: btnExitAfterOpen 2s forwards;
+        animation-delay: .7s;   
+    }
+
+    .modal-window__btn-exit::before{
+
+        animation: btnExitBeforeOpen 2s forwards;
+        animation-delay: .7s;
+    }
+
+    .modal-window__line{
+        animation: modalWindowLineShow 2s forwards;
+        animation-delay: .7s;
+    }
+
+    .modal-window__title{
+        animation: modalWindowTitleShow 2s forwards;
+        animation-delay: .7s;
+    }
+
+    .modal-window__description{
+        animation: modalWindowDescriptionShow 2s forwards;
+        animation-delay: .7s;
+    }
+}
+
+@keyframes modalOpen {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes btnExitBeforeOpen {
+    0%{
+        transform: scale(0);
+    }
+
+    40%{
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(1) rotate(45deg);
+    }
+}
+
+@keyframes btnExitAfterOpen {
+    0%{
+        transform: scale(0) rotate(90deg);
+    }
+
+    40%{
+        transform: scale(1) rotate(90deg);
+    }
+
+    100%{
+        transform: scale(1) rotate(135deg);
+    }
+}
+
+@keyframes modalWindowTitleShow {
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}
+
+@keyframes modalWindowLineShow {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes modalWindowDescriptionShow {
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(20px);
+        opacity: 1;
+    }
+}
+
+.modal-window--close{
+
+    display: flex;
+
+    opacity: 1;
+
+    animation: modalClose 1s forwards;
+    animation-delay: 1.3s;
+
+    .modal-window__btn-exit::after{
+
+        animation: btnExitAfterClose 1s forwards;
+    }
+
+    .modal-window__btn-exit::before{
+
+        animation: btnExitBeforeClose 1s forwards;
+    }
+
+    .modal-window__line{
+        animation: modalWindowLineClose 2s forwards;
+    }
+
+    .modal-window__title{
+        animation: modalWindowTitleClose 2s forwards;
+    }
+
+    .modal-window__description{
+        animation: modalWindowDescriptionClose 2s forwards;
+    }
+}
+
+@keyframes btnExitBeforeClose {
+    0%{
+        transform: scale(1) rotate(45deg);
+    }
+
+    40%{
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(0);
+    }
+}
+
+@keyframes btnExitAfterClose {
+    0%{
+        transform: scale(1) rotate(135deg);
+    }
+
+    40%{
+        transform: scale(1) rotate(90deg);
+    }
+
+    100%{
+        transform: scale(0) rotate(90deg);
+    }
+}
+
+@keyframes modalClose {
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes modalWindowTitleClose {
+    0%{
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
+
+@keyframes modalWindowLineClose {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100%{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes modalWindowDescriptionClose {
+    0%{
+        transform: translateY(20px);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+}

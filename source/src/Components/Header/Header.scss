@@ -1,3 +1,13 @@
+#header-nav-btn-buy{
+    background: url('./images/icon-buy.svg') no-repeat center center/cover;
+}
+
+#header-nav-btn-search{
+    background: url('./images/icon-search.svg') no-repeat center center/cover;
+    
+}
+
+
 .header{
 
     width: 100%;
@@ -5,6 +15,177 @@
 
     background: url('./images/background.jpg') no-repeat center center/cover;
 
+    &__nav__logo{
+
+        text-transform: uppercase;
+
+        font-family: 'Post No Bills Jaffna SemiBold', sans-serif;
+
+        user-select: none;
+
+        color: #ffffff;
+    }
+
+    &-container{
+        display: flex;
+        align-items: center;
+    }
+
+    &-container--stretch{
+        justify-content: space-between;
+    }
+
+    &-container--center{
+        justify-content: center;
+    }
+
+    &-container--column{
+        flex-direction: column;
+    }
+
+    &__nav__menu{
+
+        user-select: none;
+
+        display: flex;
+
+        &__item{
+
+            list-style: none;
+
+            cursor: pointer;
+            
+            transition: all 1s ease;
+
+            background-color: transparent;
+            
+            &__link{
+
+                color: #969696;
+
+                font-size: 14px;
+                font-family: 'PT Sans';
+
+                height: 100%;
+                width: 100%;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                text-transform: uppercase;
+
+            }
+        }
+
+        &__item--active{
+
+            transition: all 1s ease;
+
+            background-color: #1F1F1F;
+            
+            .header__nav__menu__item__link{
+
+                color: #ffffff;
+                
+            }
+        }
+
+        &__item--btns{
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0;
+            margin-left: 50px;
+
+            width: 80px;
+
+            &-btn{
+                width: 22px;
+                height: 22px;
+
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__offer{
+
+        width: 100%;
+        height: 80%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-family: 'PT Sans';
+
+        &__logo{
+
+            width: 320px;
+            height: 320px;
+
+            border: 4px solid #ffffff;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            &__title{
+
+                position: relative;
+
+                font-size: 64px;
+                font-family: 'Post No Bills Jaffna SemiBold', sans-serif;
+
+                text-transform: uppercase;
+
+                color: #ffffff;
+            }
+
+            &__title::after{
+                content: '';
+
+                position: absolute;
+                left: 0;
+                top: 100%;
+
+                background-color: #ffffff;
+                height: 2px;
+                width: 100%;
+            }
+
+            &__label{
+
+                margin-top: 10px;
+                
+                font-size: 22px;
+
+                color: #ffffff;
+
+                text-transform: uppercase;
+            }
+        }
+
+        &__description{
+
+            font-size: 16px;
+
+            color: #ffffff;
+
+            text-transform: uppercase;
+            text-align: center;
+
+            margin-top: 50px;
+
+            width: 730px;
+
+            line-height: 150%;
+        }
+    }
 }
 
 .header-dekstop{
@@ -18,14 +199,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
-        &__content{
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-    
-        }
 
         &__item{
 
@@ -103,6 +276,31 @@
                 display: flex;
 
                 user-select: none;
+            }
+        }
+    }
+
+    &__nav{
+
+        width: 100%;
+
+        background-color: #0F0F0F;
+
+        &__logo{
+
+            font-size: 36px;
+
+            cursor: pointer;
+        }
+
+        &__menu{
+
+            height: 80px;
+
+            &__item{
+
+                width: 140px;
+                height: 100%;
             }
         }
     }

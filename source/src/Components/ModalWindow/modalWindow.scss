@@ -230,12 +230,12 @@
 
     .modal-window__btn-exit::after{
 
-        animation: btnExitAfterClose 1s forwards;
+        animation: btnExitAfterClose 2s forwards;
     }
 
     .modal-window__btn-exit::before{
 
-        animation: btnExitBeforeClose 1s forwards;
+        animation: btnExitBeforeClose 2s forwards;
     }
 
     .modal-window__line{

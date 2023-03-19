@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 function ModalWindow({stateModal, setStateModal}){
 
-    const [modalOpacity, setModalOpacity] = useState('modal-window--open');
+    const [modalOpacity, setModalOpacity] = useState('');
 
     const onChangeBtnExit = ()=>{
 

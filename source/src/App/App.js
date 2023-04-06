@@ -1,11 +1,21 @@
+import React, { useState } from 'react';
+import Main from '../components/Main/Main';
+import ModalWindow from '../components/ModalWindow/ModalWindow';
+
 import './App.scss';
-import List from '../components/envelope/Envelope.js';
 
 function App() {
 
+  const [modalState, setModalState] = useState(false);
+
+  const modalChacked = ()=>{
+    setModalState(modalState => !modalState);
+  }
+
   return (
-    <div className={`wrapper`}>
-      <List />
+    <div className={`wrapper gradient`}>
+      <ModalWindow title={'Информация'} description={'МНОГО МНОГО МНОГО ТЕКСТА'} typeModal={true} activeModal={modalChacked} stateModal={modalState}/>
+      <Main activeModal={modalChacked}/>
     </div>
   )
 }
